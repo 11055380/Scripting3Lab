@@ -4,15 +4,10 @@ using UnityEngine;
 
 public class Bouncecode : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public float bounceForce = 3f;
+    
+    private void OnCollisionEnter(Collision collision)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        GetComponent<Rigidbody>().AddForce(Vector3.up*bounceForce, ForceMode.Impulse);
     }
 }
