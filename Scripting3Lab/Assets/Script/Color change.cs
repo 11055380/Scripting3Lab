@@ -4,15 +4,10 @@ using UnityEngine;
 
 public class Colorchange : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public Color newColor = Color.blue;
+    
+    void OnCollisionEnter(Collision collision)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        GetComponent<Renderer>().material.color = newColor;
     }
 }
