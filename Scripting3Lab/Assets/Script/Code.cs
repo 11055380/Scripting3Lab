@@ -12,6 +12,10 @@ public class ApplyForce : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         rb.AddForce(Vector3.forward*500);
     }
+    void OnCollisionEnter(Collision collision)
+    {
+        Debug.Log("Collision detected with "+collision.gameObject.name);
+    }
 
     // Update is called once per frame
     void Update()
